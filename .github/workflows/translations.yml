@@ -1,0 +1,14 @@
+name: 'Update translations'
+
+on:
+  schedule:
+    # run at 2.50am every day
+    - cron: 50 2 * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update locales
+        run: .bw-dev update_locales
+
